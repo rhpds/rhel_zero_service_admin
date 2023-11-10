@@ -1,0 +1,58 @@
+To demonstrate how configuration changes behave when a service is
+already running, add an export directory to the NFS service on this
+system:
+
+[source,bash]
+----
+echo "/home" >> /etc/exports
+----
+
+This command adds the home directory to the export list configuration
+file for NFS. Changing this config file does not lead to any immediate
+changes in the NFS service, though. Print the export list again to
+confirm this:
+
+[source,bash]
+----
+showmount -e
+----
+
+[source,bash]
+----
+Export list for rhel:
+----
+
+To bring configuration changes into the service, you must first use
+`+systemctl+` to restart it:
+
+[source,bash]
+----
+systemctl restart nfs-server
+----
+
+Now the configuration files have been re-read and NFS reflects the
+configuration change.
+
+[source,bash]
+----
+showmount -e
+----
+
+[source,bash]
+----
+Export list for rhel:
+/home *
+----
+
+The home directory is now listed as an exported drive that is available
+to all NFS clients. If you ever run into a scenario where you are unable
+to see configuration changes, make sure you check whether or not you
+have restarted the service and reloaded the config files.
+
+== *systemd* Cheat Sheet
+
+This lab just scratches the surface of *systemd*’s capabilities. Red Hat
+provides a
+https://access.redhat.com/articles/systemd-cheat-sheet[systemd Cheat
+Sheet] which has a variety of other commands that are useful for service
+management.
