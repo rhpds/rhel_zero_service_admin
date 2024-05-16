@@ -33,11 +33,9 @@ systemctl enable --now nfs-server
 Created symlink /etc/systemd/system/multi-user.target.wants/nfs-server.service → /usr/lib/systemd/system/nfs-server.service
 ----
 
-____
-_Note:_ If you just wanted to start a service, `+systemctl start+`
+Note: If you just wanted to start a service, `+systemctl start+`
 followed by the service name will do the trick. However, the service
 will not start again if you reboot the system.
-____
 
 Now the *nfs-server* service is started, and it will start every time
 the system starts as well. Run the `+showmount+` command again now that

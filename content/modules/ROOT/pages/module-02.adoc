@@ -31,8 +31,7 @@ may have otherwise occurred, leaving memory allocated and potentially
 leading to corrupted files. Therefore, only use `+-SIGKILL+` as a last
 resort.
 
-____
-_NOTE:_ You will also see the `+kill+` signals referred to numerically.
+
+NOTE: You will also see the `+kill+` signals referred to numerically.
 `+-SIGTERM+` is equivalent to `+-15+` and `+-SIGKILL+` is equivalent to
-`+-9+`.
-____
+`+-9+`

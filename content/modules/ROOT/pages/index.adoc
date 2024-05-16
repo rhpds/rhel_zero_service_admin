@@ -63,8 +63,7 @@ USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root        3790  101  0.0   7352   944 pts/1    R+   17:38   0:01 dd if=/dev/zero of=/dev/null
 ----
 
-____
-_NOTE:_ The first command in this line will print the column headers for
+NOTE: The first command in this line will print the column headers for
 `+ps aux+` so that you can see what each entry means. The second command
 searches for a process called `+dd+`, where the single quotes ensure the
 trailing space is part of the search criteria. Enclosing the first "`d`"
@@ -74,4 +73,3 @@ Process ID. This ID is how you interact with the process, as it can be
 used in other commands as a unique reference to this process. Now you
 know how to find a process. The next step will walk you through
 terminating this indefinite process.
-____
