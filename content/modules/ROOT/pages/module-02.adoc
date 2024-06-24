@@ -15,9 +15,14 @@ There is no output, but switching back to Terminal 2 reveals that the
 
 [source,bash]
 ----
-Terminated
+ps aux | head -n1 ; ps aux | grep '[d]d '
 ----
 
+[source,bash]
+----
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+[1]+  Terminated              dd if=/dev/zero of=/dev/null
+----
 The `+kill+` command can send a variety of signals. Calling the command
 without any options will default to `+-SIGTERM+`. This command will
 inform the process that it is time for it to stop, but allow it to run

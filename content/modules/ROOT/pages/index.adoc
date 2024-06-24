@@ -60,7 +60,7 @@ ps aux | head -n1 ; ps aux | grep '[d]d '
 [source,bash]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root        3790  101  0.0   7352   944 pts/1    R+   17:38   0:01 dd if=/dev/zero of=/dev/null
+root       30031 93.1  0.0   5620  1028 pts/0    R    14:29   0:07 dd if=/dev/zero of=/dev/null
 ----
 
 NOTE: The first command in this line will print the column headers for
