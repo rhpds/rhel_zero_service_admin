@@ -1,3 +1,5 @@
+=== What are Processes?
+
 _Files_ keep track of information on a Linux system, providing a way for
 users to organize and store information. Sometimes, files contain
 information that can be run to carry out a specific operation. These

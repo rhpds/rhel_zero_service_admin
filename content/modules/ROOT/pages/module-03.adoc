@@ -1,3 +1,5 @@
+=== What is a Service?
+
 The process you interacted with in the previous step was a foreground
 process. It ran in a terminal window where you could see it. Some
 processes run in the background, out of view of the user. These

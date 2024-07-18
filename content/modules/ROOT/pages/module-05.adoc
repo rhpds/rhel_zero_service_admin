@@ -1,3 +1,5 @@
+=== Restarting a Service to Apply Configuration Changes
+
 To demonstrate how configuration changes behave when a service is
 already running, add an export directory to the NFS service on this
 system:
