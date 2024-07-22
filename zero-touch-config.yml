@@ -5,15 +5,15 @@ antora:
   dir: www
   modules:
     - name: index
-      label: Module 1
+      label: What are Processes?
     - name: module-02
-      label: Module 2
+      label: Killing Processes
     - name: module-03
-      label: Module 3
+      label: What is a Service?
     - name: module-04
-      label: Module 4
+      label: Starting and Enabling a Service with systemctl
     - name: module-05
-      label: Module 5
+      label: Restarting a Service to Apply Configuration Changes
 tabs:
   - name: ">_ root"
     port: 443
