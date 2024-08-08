@@ -7,7 +7,7 @@ process ID after `+kill+`. The process ID is the second column of the
 for each new lab instance the `+pidof+` (__P__rocess *ID of*) command is
 used to automatically find the process ID.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 kill $(pidof dd)
 ----
@@ -15,12 +15,12 @@ kill $(pidof dd)
 There is no output, but switching back to Terminal 2 reveals that the
 `+dd+` process has been terminated.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 ps aux | head -n1 ; ps aux | grep '[d]d '
 ----
 
-[source,bash]
+[source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 [1]+  Terminated              dd if=/dev/zero of=/dev/null

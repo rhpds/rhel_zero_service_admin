@@ -19,12 +19,12 @@ including those running without a controlling terminal. This command
 will also give information about the users associated with these
 processes.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 ps aux
 ----
 
-[source,bash]
+[source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.7 186268 14440 ?        Ss   16:09   0:03 /usr/lib/systemd/systemd --switched-root --system --deserialize 17
@@ -44,7 +44,7 @@ infinite zeros into a file that discards all inputs, so the process will
 continue indefinitely. The `+&+` sends the process into the background
 so that we do not interact with it in the terminal.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 dd if=/dev/zero of=/dev/null &
 ----
@@ -54,12 +54,12 @@ will continue running in the foreground until you interrupt it.
 Returning to the original terminal, run a search on `+ps aux+` to find
 this indefinite `+dd+` process:
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 ps aux | head -n1 ; ps aux | grep '[d]d '
 ----
 
-[source,bash]
+[source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root       30031 93.1  0.0   5620  1028 pts/0    R    14:29   0:07 dd if=/dev/zero of=/dev/null

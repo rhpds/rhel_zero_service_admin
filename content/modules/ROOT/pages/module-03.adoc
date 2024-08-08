@@ -23,12 +23,12 @@ using Open Containers Initiative (OCI) Containers and Container Images.
 Check the status of the *podman* service with the
 following command:
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 systemctl status podman.service --no-pager
 ----
 
-[source,bash]
+[source,text]
 ----
 ● podman.service - Podman API Service
      Loaded: loaded (/usr/lib/systemd/system/podman.service; disabled; preset: disabled)

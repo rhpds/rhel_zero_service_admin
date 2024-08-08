@@ -9,14 +9,14 @@ configuration file changes.
 
 To begin, run the command to show the export list for the NFS server:
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 showmount -e
 ----
 
 This throws an error, because the NFS service is not running.
 
-[source,bash]
+[source,text]
 ----
 clnt_create: RPC: Program not registered
 ----
@@ -25,12 +25,12 @@ To solve this issue, you need to start the service. However, if you want
 the service to start each time you boot the system, you need to enable
 the service. You can do both of these operations in one line:
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 systemctl enable --now nfs-server
 ----
 
-[source,bash]
+[source,text]
 ----
 Created symlink /etc/systemd/system/multi-user.target.wants/nfs-server.service → /usr/lib/systemd/system/nfs-server.service
 ----
@@ -43,12 +43,12 @@ Now the *nfs-server* service is started, and it will start every time
 the system starts as well. Run the `+showmount+` command again now that
 the service is active:
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 showmount -e
 ----
 
-[source,bash]
+[source,text]
 ----
 Export list for rhel:
 ----
