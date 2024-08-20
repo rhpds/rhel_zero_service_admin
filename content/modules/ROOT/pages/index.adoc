@@ -70,7 +70,9 @@ NOTE: The first command in this line will print the column headers for
 searches for a process called `+dd+`, where the single quotes ensure the
 trailing space is part of the search criteria. Enclosing the first "`d`"
 in square brackets prevents the `+grep+` search from finding itself when
-it looks through the process list. Take note of the second column, the
+it looks through the process list. 
+
+Take note of the second column, the
 Process ID. This ID is how you interact with the process, as it can be
 used in other commands as a unique reference to this process. Now you
 know how to find a process. The next step will walk you through
