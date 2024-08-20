@@ -35,7 +35,7 @@ systemctl enable --now nfs-server
 Created symlink /etc/systemd/system/multi-user.target.wants/nfs-server.service → /usr/lib/systemd/system/nfs-server.service
 ----
 
-Note: If you just wanted to start a service, `+systemctl start+`
+NOTE: If you just wanted to start a service, `+systemctl start+`
 followed by the service name will do the trick. However, the service
 will not start again if you reboot the system.
 
