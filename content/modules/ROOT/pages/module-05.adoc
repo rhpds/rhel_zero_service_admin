@@ -56,5 +56,5 @@ have restarted the service and reloaded the config files.
 This lab just scratches the surface of *systemd*’s capabilities. Red Hat
 provides a
 https://access.redhat.com/articles/systemd-cheat-sheet[systemd Cheat
-Sheet] which has a variety of other commands that are useful for service
+Sheet^] which has a variety of other commands that are useful for service
 management.
