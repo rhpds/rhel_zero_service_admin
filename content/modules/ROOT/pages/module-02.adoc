@@ -12,8 +12,7 @@ used to automatically find the process ID.
 kill $(pidof dd)
 ----
 
-There is no output, but switching back to Terminal 2 reveals that the
-`+dd+` process has been terminated.
+Look for the `+dd+` process again.
 
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
@@ -25,6 +24,9 @@ ps aux | head -n1 ; ps aux | grep '[d]d '
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 [1]+  Terminated              dd if=/dev/zero of=/dev/null
 ----
+
+There is no output because the process has been killed.
+
 The `+kill+` command can send a variety of signals. Calling the command
 without any options will default to `+-SIGTERM+`. This command will
 inform the process that it is time for it to stop, but allow it to run
