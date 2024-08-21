@@ -1,6 +1,6 @@
 === Killing Processes
 
-Now that you found the `+dd+` process on Terminal 1, terminate it using
+Now that you found the `+dd+` process, terminate it using
 the `+kill+` command. You would typically just manually enter the
 process ID after `+kill+`. The process ID is the second column of the
 `+ps aux+` output from before. However, to make this command clickable
