@@ -9,6 +9,8 @@ configuration file changes.
 
 To begin, run the command to show the export list for the NFS server:
 
+NOTE: The below command is expected to fail and may take some time to complete.
+
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 showmount -e
@@ -48,9 +50,9 @@ the service is active:
 showmount -e
 ----
 
-[source,text]
+[source,text,subs="+macros,+attributes"]
 ----
-Export list for rhel:
+Export list for bastion.{{ guid }}.internal:
 ----
 
 The export list is currently blank, which is something controlled by a

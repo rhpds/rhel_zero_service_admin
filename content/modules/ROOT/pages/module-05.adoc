@@ -40,9 +40,9 @@ configuration change.
 showmount -e
 ----
 
-[source,text]
+[source,text,subs="+macros,+attributes"]
 ----
-Export list for rhel:
+Export list for bastion.{{ guid }}.internal:
 /home *
 ----
 
