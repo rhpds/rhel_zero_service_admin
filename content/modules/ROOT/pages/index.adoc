@@ -19,11 +19,13 @@ including those running without a controlling terminal. This command
 will also give information about the users associated with these
 processes.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 ps aux
 ----
 
+.Output
 [source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
@@ -44,6 +46,7 @@ infinite zeros into a file that discards all inputs, so the process will
 continue indefinitely. The `+&+` sends the process into the background
 so that we do not interact with it in the terminal.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 dd if=/dev/zero of=/dev/null &
@@ -54,11 +57,13 @@ will continue running in the foreground until you interrupt it.
 Returning to the original terminal, run a search on `+ps aux+` to find
 this indefinite `+dd+` process:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 ps aux | head -n1 ; ps aux | grep '[d]d '
 ----
 
+.Output
 [source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
@@ -70,7 +75,7 @@ NOTE: The first command in this line will print the column headers for
 searches for a process called `+dd+`, where the single quotes ensure the
 trailing space is part of the search criteria. Enclosing the first "`d`"
 in square brackets prevents the `+grep+` search from finding itself when
-it looks through the process list. 
+it looks through the process list.
 
 Take note of the second column, the
 Process ID. This ID is how you interact with the process, as it can be

@@ -7,6 +7,7 @@ process ID after `+kill+`. The process ID is the second column of the
 for each new lab instance the `+pidof+` (__P__rocess *ID of*) command is
 used to automatically find the process ID.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 kill $(pidof dd)
@@ -14,11 +15,13 @@ kill $(pidof dd)
 
 Look for the `+dd+` process again.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 ps aux | head -n1 ; ps aux | grep '[d]d '
 ----
 
+.Output
 [source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND

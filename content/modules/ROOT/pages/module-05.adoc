@@ -4,6 +4,7 @@ To demonstrate how configuration changes behave when a service is
 already running, add an export directory to the NFS service on this
 system:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 echo "/home" >> /etc/exports
@@ -14,11 +15,13 @@ file for NFS. Changing this config file does not lead to any immediate
 changes in the NFS service, though. Print the export list again to
 confirm this:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 showmount -e
 ----
 
+.Output
 [source,text]
 ----
 Export list for rhel:
@@ -27,6 +30,7 @@ Export list for rhel:
 To bring configuration changes into the service, you must first use
 `+systemctl+` to restart it:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 systemctl restart nfs-server
@@ -35,11 +39,13 @@ systemctl restart nfs-server
 Now the configuration files have been re-read and NFS reflects the
 configuration change.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 showmount -e
 ----
 
+.Output
 [source,text,subs="+macros,+attributes"]
 ----
 Export list for bastion.{{ guid }}.internal:
