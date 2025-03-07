@@ -13,7 +13,13 @@ used to automatically find the process ID.
 kill $(pidof dd)
 ----
 
-Look for the `+dd+` process again.
+.Output
+[source,text]
+----
+[1]+  Terminated              dd if=/dev/zero of=/dev/null
+----
+
+Double check the process has terminated by looking for the `+dd+` process again.
 
 .Command
 [source,bash,subs="+macros,+attributes",role=execute]

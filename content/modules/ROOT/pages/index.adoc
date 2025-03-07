@@ -52,10 +52,15 @@ so that we do not interact with it in the terminal.
 dd if=/dev/zero of=/dev/null &
 ----
 
-When you run this command, you will not see an output as the process
-will continue running in the foreground until you interrupt it.
-Returning to the original terminal, run a search on `+ps aux+` to find
-this indefinite `+dd+` process:
+.Output
+[source,bash]
+----
+[1] 39999
+----
+
+NOTE: When you run this command, the process id is shown. This process will continue running in the foreground until you interrupt it.
+
+Run a search on `+ps aux+` to find this indefinite `+dd+` process:
 
 .Command
 [source,bash,subs="+macros,+attributes",role=execute]
@@ -67,7 +72,7 @@ ps aux | head -n1 ; ps aux | grep '[d]d '
 [source,text]
 ----
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root       30031 93.1  0.0   5620  1028 pts/0    R    14:29   0:07 dd if=/dev/zero of=/dev/null
+root       39999 93.1  0.0   5620  1028 pts/0    R    14:29   0:07 dd if=/dev/zero of=/dev/null
 ----
 
 NOTE: The first command in this line will print the column headers for
